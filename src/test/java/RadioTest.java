@@ -57,6 +57,7 @@ public class RadioTest {
         int actual = radio.radioStation;
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void prevLessMin() { // понижаем частоту ниже нижней границы
         Radio radio = new Radio();
