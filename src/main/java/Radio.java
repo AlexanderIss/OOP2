@@ -1,6 +1,15 @@
 public class Radio {
-    public int currentVolume;
-    public int radioStation;
+    private int currentVolume;
+    private int radioStation;
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public int getRadioStation() {
+        return radioStation;
+    }
+
 
     public void setRadioStation(int newRadioStation) {
         if (newRadioStation < 10) {
