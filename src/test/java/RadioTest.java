@@ -125,7 +125,7 @@ public class RadioTest {
     void setRadioMaxNoValid() { // невалидное значение частоты выше границы
         Radio radio = new Radio();
         radio.setRadioStation(5);
-        radio.setRadioStation(10);
+        radio.setRadioStation(11);
         int expected = 5;
         int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
@@ -139,8 +139,27 @@ public class RadioTest {
         int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    void nextV() { // повышаем частоту
+        Radio radio = new Radio();
+        radio.setRadioStation(10);
+        radio.next();
+        int expected = 10;
+        int actual = radio.getRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    void prevV() { // понижаем частоту
+        Radio radio = new Radio();
+        radio.setRadioStation(-1);
+        radio.prev();
+        int expected = -1;
+        int actual = radio.getRadioStation();
+        Assertions.assertEquals(expected, actual);
+    }
 
 }
+
 
 
 
