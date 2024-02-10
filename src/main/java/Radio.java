@@ -12,8 +12,8 @@ public class Radio {
 
 
     public void setRadioStation(int newRadioStation) {
-        if (newRadioStation < 11) {
-            if (newRadioStation >= -1) {
+        if (newRadioStation < 10) {
+            if (newRadioStation >= 0) {
                 radioStation = newRadioStation;
             }
         }

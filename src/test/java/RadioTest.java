@@ -140,20 +140,20 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void nextV() { // повышаем частоту
+    void nextNoValid() { // проверяем не валидное значение
         Radio radio = new Radio();
         radio.setRadioStation(10);
         radio.next();
-        int expected = 10;
+        int expected = 1;
         int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void prevV() { // понижаем частоту
+    void prevNoValid() { // проверяем не валидное значение
         Radio radio = new Radio();
         radio.setRadioStation(-1);
         radio.prev();
-        int expected = -1;
+        int expected = 9;
         int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
