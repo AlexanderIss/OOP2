@@ -140,15 +140,6 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void nextNoValid() { // проверяем не валидное значение
-        Radio radio = new Radio();
-        radio.setRadioStation(10);
-        radio.next();
-        int expected = 1;
-        int actual = radio.getRadioStation();
-        Assertions.assertEquals(expected, actual);
-    }
-    @Test
     void prevNoValid() { // проверяем не валидное значение
         Radio radio = new Radio();
         radio.setRadioStation(-1);
@@ -158,7 +149,122 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-}
+        // --------------------------next: все варианты поля radioStation------------------------------------------
+        @Test
+        void next_1() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(2);
+            radio.setRadioStation(-1);
+            radio.next();
+            int expected = 3;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next0() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(0);
+            radio.next();
+            int expected = 1;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next1() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(1);
+            radio.next();
+            int expected = 2;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next2() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(2);
+            radio.next();
+            int expected = 3;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next3() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(3);
+            radio.next();
+            int expected = 4;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next4() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(4);
+            radio.next();
+            int expected = 5;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next5() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(5);
+            radio.next();
+            int expected = 6;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void nextN6() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(6);
+            radio.next();
+            int expected = 7;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next7() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(7);
+            radio.next();
+            int expected = 8;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next8() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(8);
+            radio.next();
+            int expected = 9;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next9() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(9);
+            radio.next();
+            int expected = 0;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+        @Test
+        void next10() { // проверяем не валидное значение
+            Radio radio = new Radio();
+            radio.setRadioStation(5);
+            radio.setRadioStation(10);
+            radio.next();
+            int expected = 6;
+            int actual = radio.getRadioStation();
+            Assertions.assertEquals(expected, actual);
+        }
+
+    }
+
+
+
 
 
 
